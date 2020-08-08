@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/Mohamad/Downloads/sqljdbc_8.4/enu/mssql-jdbc-8.4.0.jre8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mohamad/Downloads/objectdb-2.8.3/bin/converter.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mohamad/Downloads/objectdb-2.8.3/bin/explorer.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mohamad/Downloads/objectdb-2.8.3/bin/objectdb.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mohamad/Downloads/objectdb-2.8.3/bin/objectdb-jee.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
