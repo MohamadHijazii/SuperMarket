@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeController">
+   <children>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="44.0" prefWidth="125.0" text="Employee">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tb" layoutX="14.0" layoutY="58.0" prefHeight="529.0" prefWidth="603.0">
+        <columns>
+          <TableColumn fx:id="nb" prefWidth="75.0" text="E_number" />
+          <TableColumn fx:id="lname" prefWidth="75.0" text="Last Name" />
+            <TableColumn fx:id="fname" prefWidth="75.0" text="F_Name" />
+            <TableColumn fx:id="ex" prefWidth="75.0" text="Extension" />
+            <TableColumn fx:id="email" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="ocode" prefWidth="75.0" text="Office Code" />
+            <TableColumn fx:id="report" prefWidth="75.0" text="Reports to" />
+            <TableColumn fx:id="job" prefWidth="75.0" text="Job Title" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

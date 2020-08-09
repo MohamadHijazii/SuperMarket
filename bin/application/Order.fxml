@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controller.OrderController">
+   <children>
+      <Label alignment="CENTER" layoutX="34.0" layoutY="34.0" prefHeight="44.0" prefWidth="125.0" text="Orders">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tb" layoutX="34.0" layoutY="78.0" prefHeight="529.0" prefWidth="637.0">
+         <columns>
+            <TableColumn fx:id="nb" prefWidth="75.0" text="Order nb" />
+            <TableColumn fx:id="odate" prefWidth="75.0" text="order date" />
+            <TableColumn fx:id="rdate" prefWidth="105.0" text="required date" />
+            <TableColumn fx:id="sdate" prefWidth="113.0" text="shipped date" />
+            <TableColumn fx:id="status" prefWidth="70.0" text="status" />
+            <TableColumn fx:id="comments" text="comments" />
+            <TableColumn fx:id="cnb" prefWidth="117.0" text="costumer number" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

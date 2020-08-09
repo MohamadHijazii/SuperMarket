@@ -8,24 +8,26 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+import javafx.collections.ObservableList;
+
 public class DB {
 	
 	public static DB instance;
 	Connection con;
 	
-	ArrayList<Customer> customers;
-	ArrayList<Employee> employees;
-	ArrayList<Office> offices;
-	ArrayList<Order> orders;
-	ArrayList<OrderDetails> orderDetails;
-	ArrayList<Payment> payments;
-	ArrayList<Product> products;
-	ArrayList<Productlines> productLines;
+	public ArrayList<Customer> customers;
+	public ArrayList<Employee> employees;
+	public ArrayList<Office> offices;
+	public ArrayList<Order> orders;
+	public ArrayList<OrderDetails> orderDetails;
+	public ArrayList<Payment> payments;
+	public ArrayList<Product> products;
+	public ArrayList<Productlines> productLines;
 	
 	private DB() {
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");	//ma tod2ara zabta
-			 String m_Connection="jdbc:sqlserver://DESKTOP-BHRFKKQ:1433;databaseName=SMarketDB;user=mhamad;password=***;";
+			 String m_Connection="jdbc:sqlserver://DESKTOP-BHRFKKQ:1433;databaseName=SMarketDB;user=mhamad;password=4f8d8512b5;";
 			 con = DriverManager.getConnection(m_Connection); 
 			 System.out.println("connection created!");
 			 }
@@ -129,7 +131,7 @@ public class DB {
 			Employee r = Employee.getEmployeeWithId(e.reportsTo);
 			e.employee = r;
 			if(r!= null)
-				r.reporting.add(e);
+				r.employees.add(e);
 		}
 	}
 	
@@ -185,6 +187,7 @@ public class DB {
 		for(OrderDetails o : orderDetails) {
 			Product p = Product.getProductWithId(o.productCode);
 			o.product = p;
+			p.orderDetails.add(o);
 			Order or = Order.getOrderWithId(o.orderNumber);
 			or.orderDetails.add(o);
 			o.order = or;
