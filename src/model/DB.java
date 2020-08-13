@@ -27,7 +27,7 @@ public class DB {
 	private DB() {
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");	//ma tod2ara zabta
-			 String m_Connection="jdbc:sqlserver://DESKTOP-BHRFKKQ:1433;databaseName=SMarketDB;user=mhamad;password=4f8d8512b5;";
+			 String m_Connection="jdbc:sqlserver://DESKTOP-BHRFKKQ:1433;databaseName=SMarketDB;user=mhamad;password=****;";
 			 con = DriverManager.getConnection(m_Connection); 
 			 System.out.println("connection created!");
 			 }
@@ -91,7 +91,12 @@ public class DB {
 		ResultSet r = instance.ExecuteQuery("select * from customers");
 		try {
 			while(r.next()) {
-					Customer c = new Customer(r.getInt("customerNumber"), r.getString("customerName"), r.getString("contactLastName"), r.getString("contactFirstName"), r.getString("phone"),r.getString("addressLine1"),r.getString("addressLine2"),r.getString("city"),r.getString("state"), r.getString("postalCode"), r.getString("country"),r.getInt("salesRepEmployeeNumber"),r.getDouble("creditLimit"));
+					Customer c = new Customer(r.getInt("customerNumber"), 
+							r.getString("customerName"), r.getString("contactLastName"),
+							r.getString("contactFirstName"), r.getString("phone"),r.getString("addressLine1"),
+							r.getString("addressLine2"),r.getString("city"),r.getString("state"),
+							r.getString("postalCode"), r.getString("country"),r.getInt("salesRepEmployeeNumber"),
+							r.getDouble("creditLimit"));
 					customers.add(c);
 			}
 		} catch (SQLException e) {
